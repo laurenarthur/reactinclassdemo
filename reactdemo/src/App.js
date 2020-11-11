@@ -9,9 +9,9 @@ function App() {
     <div className="App">
         <h1>To-do List</h1>
         <input></input>
-        <button>Add To-do</button>
+        <button>Add Todo</button>
         <TaskList />
-        <TaskItems />
+        <TaskList />
     </div>
   );
 }
