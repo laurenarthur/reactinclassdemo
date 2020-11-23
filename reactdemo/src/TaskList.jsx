@@ -4,11 +4,11 @@ import TaskItems from './TaskItems';
 class TaskList extends Component{
     render(){
         const {title, buttonText, tasks, buttonFunction} = this.props;
+        const taskItems = tasks.map((task) => <TaskItems tasks={task} key={task} buttonFunction={buttonFunction}/>);
         return (
             <div>
                 {title}
-                <TaskItems tasks={tasks} />
-                <button onClick={() => buttonFunction}>{buttonText}</button>
+                {taskItems}
             </div>
         )
     }
