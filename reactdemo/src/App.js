@@ -2,29 +2,38 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TaskList from './TaskList';
-import { render } from 'react-dom';
 
 class App extends Component {
     constructor(){
         super()
         this.state = {
-            todoList: 'item2'
+            todoList: ['item2', 'item1'],
+            task: ''
         }
     }
     render(){
         return (
             <div className="App">
                 <h1>To-do List</h1>
-                <input></input>
-                <button onClick={()=> this.addTodo()}>Add Todo</button>
+                <form onSubmit={(e) =>this.addTodo(e)}>
+                    <input
+                        type='text'
+                        className='input'
+                        placeholder='Enter Todo Item'
+                        value={this.state.task}
+                        onChange={(e) => this.setState({task: e.target.value})}
+                    />
+                <button type='submit'>Add Todo</button>     
+                </form>
                 <TaskList title={'Pending Todo'} buttonText={'Done'} tasks={this.state.todoList} buttonFunction={this.removeTodo()} />
-                <TaskList title={'Completed'} buttonText={'Delete'} tasks={'done'} buttonFunction={this.removeTodo()}/>
+                <TaskList title={'Completed'} buttonText={'Delete'} tasks={'done'} buttonFunction={this.removeTodo()}/> 
+                
             </div>
         );
     }
-    addTodo(){
-        console.log('called');
-        this.setState({todoList: 'item1'});
+    addTodo(e){
+        e.preventDefaut();
+        
     }
     removeTodo(){
         if(this.state.todoList != null){
