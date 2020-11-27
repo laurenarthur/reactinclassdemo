@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-image: url('/background.png')
 }
 
 body{
@@ -8,17 +7,30 @@ body{
     color: white;
 }
 
-#head{
-    
-}
 .title{
-    color: black;
+    color:white;
     font-size: 40px;
-    text-shadow: 2px 2px 8px #F8B229;
+    text-shadow: 2px 2px #BB2528;
 }
 
+.wrapper{
+    margin:auto;
+    width:350px;
+    background-color:#F8B229;
+    text-align: center;
+    overflow:auto;
+}
 
+#todo-list{
+    float:left;
+    text-align: center;
+    margin-right: 100px;
+}
 
+#completed-list{
+    float:right;
+    text-align: center;
+}
 
 
 
