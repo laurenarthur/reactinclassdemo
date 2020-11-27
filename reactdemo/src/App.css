@@ -2,6 +2,40 @@
   text-align: center;
 }
 
+body{
+    background-color:#165B33;
+    
+    color: white;
+}
+
+#head{
+    
+}
+.title{
+    color: black;
+    font-size: 40px;
+    text-shadow: 2px 2px 8px #F8B229;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
