@@ -1,10 +1,17 @@
 .App {
   text-align: center;
+  background-color:#165B33;
 }
 
 body{
-    background-color:#165B33;
-    color: white;
+    font-family: "Courier New", Courier, monospace;
+    margin:auto;
+    max-width: 50em;
+    background-image: url('backgroundimage.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .title{
@@ -16,21 +23,24 @@ body{
 .wrapper{
     margin:auto;
     width:350px;
-    background-color:#F8B229;
     text-align: center;
     overflow:auto;
 }
 
 #todo-list{
+    font-size: 25px;
+    color:white;
     float:left;
     text-align: center;
-    margin-right: 100px;
 }
 
 #completed-list{
+    font-size: 25px;
+    color:white;
     float:right;
     text-align: center;
 }
+
 
 
 

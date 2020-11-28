@@ -7,8 +7,8 @@ class App extends Component {
     constructor(){
         super()
         this.state = {
-            todoList: [],
-            completeList: [],
+            todoList: ['Decorate', 'Grocery Shop'],
+            completeList: ['Homework', 'Study'],
             task: ''
         }
     }
@@ -29,7 +29,7 @@ class App extends Component {
 
                 <div class='wrapper'>
                     <div id='todo-list'>
-                         <TaskList title={'Pending Todo'} buttonText={'Done'} tasks={this.state.todoList} buttonFunction={this.removeTodo} />
+                         <TaskList title={'Todo'} buttonText={'Done'} tasks={this.state.todoList} buttonFunction={this.removeTodo} />
                     </div>
                     <div id='completed-list'>
                         <TaskList title={'Completed'} buttonText={"Delete"} tasks={this.state.completeList} buttonFunction={this.deleteTodo} />
